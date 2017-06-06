@@ -1,0 +1,11 @@
+---
+- hosts: all
+  remote_user: ec2-user
+  sudo: yes
+  tasks:
+      - name: Add User 
+        user: name=user1
+
+      - name: Adding keys to authorized_keys
+        authorized_key: user=user1 key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDfrz+CkYp6k7O/g8+K9RHmXzCAJaRHW4xrpme+l5O6E3LBLi+BcmDg/MV2RI8OU69jxtZ2O6jdIVHts1O1ZyAEznBJos2NgeGPIcgrp5ZVax+yBa92TeXxJlkEEMlT1RGkgy3GjSqobhsqsLBHmDiHI5921f9mECIO3kUgqeMTXw== localhost@localserver" path=/home/user1/.ssh/authorized_keys state=present
+        with_items: ssh_keys.results
