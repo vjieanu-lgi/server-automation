@@ -7,5 +7,5 @@
         user: name=cclosca
 
       - name: Adding keys to authorized_keys
-        authorized_key: user=user1 key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCnvtt/+MCoHlrqdRoMCZJcohnbJAf8IPWFmyYshWMRnHmNGaMr+2+tdEodW9RjlJIoOXXI20JwbOcywd0El4FYBrFPV2wpf7fd2a1V1y0SK2g5une/C9voV+J3B8g+BRvGMkuynrMTowOcTRadtZuIWskT6o0BisBo3a9qQkNphxWaMkUO1uLeTrFctG30WX5Y16Gm8Ya20HQI2I6MpIWyM6qC91tXRjskO5VqpNzI0EjShqJPlA9KjLbCoUqxHYEFf+9M2/qUC21Qw9E1zAsVdcNPjD5vBud9NVQ4R3798I5xfo/BlRHZPDAJsAPXjDSTm0uAlMOghTELJuvO77TJ closcacostel@Closcas-MBP" path=/home/cclosca/.ssh/authorized_keys state=present
+        authorized_key: user=cclosca key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCnvtt/+MCoHlrqdRoMCZJcohnbJAf8IPWFmyYshWMRnHmNGaMr+2+tdEodW9RjlJIoOXXI20JwbOcywd0El4FYBrFPV2wpf7fd2a1V1y0SK2g5une/C9voV+J3B8g+BRvGMkuynrMTowOcTRadtZuIWskT6o0BisBo3a9qQkNphxWaMkUO1uLeTrFctG30WX5Y16Gm8Ya20HQI2I6MpIWyM6qC91tXRjskO5VqpNzI0EjShqJPlA9KjLbCoUqxHYEFf+9M2/qUC21Qw9E1zAsVdcNPjD5vBud9NVQ4R3798I5xfo/BlRHZPDAJsAPXjDSTm0uAlMOghTELJuvO77TJ closcacostel@Closcas-MBP" path=/home/cclosca/.ssh/authorized_keys state=present
         with_items: ssh_keys.results
